@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading — Job Recommendation System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream:       #F7F4EF;
+            --cream-dark:  #EDE9E2;
+            --sage:        #B8CCBA;
+            --sage-light:  #D4E4D6;
+            --sage-dark:   #8AAE90;
+            --blue-light:  #D0E6EE;
+            --blue-dark:   #7AAFC0;
+            --peach-light: #F5E4D4;
+            --white:       #FDFCFB;
+            --text-dark:   #3A3530;
+            --text-mid:    #6B6560;
+            --text-light:  #A09890;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        /* ─── BLOB DECORATIONS ─── */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--sage-light) 0%, transparent 65%);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -80px;
+            left: -80px;
+            width: 320px;
+            height: 320px;
+            background: radial-gradient(circle, var(--blue-light) 0%, transparent 65%);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.55;
+        }
+
+        /* ─── CARD ─── */
+        .loading-card {
+            background: var(--white);
+            border-radius: 28px;
+            padding: 44px 48px;
+            max-width: 480px;
+            width: 100%;
+            box-shadow: 0 8px 40px rgba(58, 53, 48, 0.1);
+            position: relative;
+            z-index: 1;
+            animation: fadeUp 0.5s ease both;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ─── ICON ─── */
+        .brand-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--cream);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-bottom: 24px;
+            animation: gentleBob 3s ease-in-out infinite;
+        }
+
+        @keyframes gentleBob {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-5px); }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55em;
+            font-weight: 500;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            font-size: 13.5px;
+            font-weight: 300;
+            margin-bottom: 32px;
+        }
+
+        /* ─── PROGRESS ─── */
+        .progress-track {
+            background: var(--cream-dark);
+            border-radius: 99px;
+            height: 6px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--sage-dark), var(--sage));
+            border-radius: 99px;
+            transition: width 0.4s ease;
+        }
+
+        .progress-label {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 28px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #progressPct { color: var(--sage-dark); font-weight: 500; }
+
+        /* ─── STEPS ─── */
+        .steps { display: flex; flex-direction: column; gap: 10px; }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 16px;
+            background: var(--cream);
+            border-radius: 14px;
+            transition: background 0.3s;
+        }
+
+        .step.active   { background: var(--sage-light); }
+        .step.done     { background: var(--cream); opacity: 0.7; }
+
+        .step-dot {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--cream-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-light);
+            flex-shrink: 0;
+            transition: all 0.3s;
+        }
+
+        .step.active .step-dot {
+            background: var(--sage-dark);
+            color: white;
+            animation: pulse 1.6s ease-in-out infinite;
+        }
+
+        .step.done .step-dot {
+            background: var(--sage);
+            color: white;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(138, 174, 144, 0.4); }
+            50%       { box-shadow: 0 0 0 7px rgba(138, 174, 144, 0); }
+        }
+
+        .step-body {}
+        .step-title { font-size: 13.5px; font-weight: 500; color: var(--text-dark); margin-bottom: 2px; }
+        .step-desc  { font-size: 12px; color: var(--text-light); font-weight: 300; }
+
+        /* ─── STATUS ─── */
+        .status-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 24px;
+            font-size: 13px;
+            color: var(--text-mid);
+            font-weight: 300;
+        }
+
+        .mini-spinner {
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--cream-dark);
+            border-top-color: var(--sage-dark);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            flex-shrink: 0;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* ─── ERROR ─── */
+        .error-box {
+            display: none;
+            margin-top: 20px;
+            padding: 14px 16px;
+            background: #FDF0F0;
+            border: 1px solid #F0C4C4;
+            border-radius: 12px;
+            color: #8B4444;
+            font-size: 13px;
+        }
+
+        .retry-btn {
+            display: none;
+            margin-top: 16px;
+            width: 100%;
+            padding: 12px;
+            background: var(--text-dark);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .retry-btn:hover { background: #2a2520; transform: translateY(-1px); }
+    </style>
+</head>
+<body>
+    <div class="loading-card">
+
+        <div class="brand-icon">🎯</div>
+        <h1>Getting Ready</h1>
+        <p class="subtitle">Initialising your personalised job matcher</p>
+
+        <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-label">
+            <span id="progressMsg">Preparing system…</span>
+            <span id="progressPct">0%</span>
+        </div>
+
+        <div class="steps">
+            <div class="step" id="step1">
+                <div class="step-dot" id="dot1">1</div>
+                <div class="step-body">
+                    <div class="step-title">Initialise Database</div>
+                    <div class="step-desc">Setting up connections and tables</div>
+                </div>
+            </div>
+            <div class="step" id="step2">
+                <div class="step-dot" id="dot2">2</div>
+                <div class="step-body">
+                    <div class="step-title">Load Job Listings</div>
+                    <div class="step-desc">Importing roles from dataset</div>
+                </div>
+            </div>
+            <div class="step" id="step3">
+                <div class="step-dot" id="dot3">3</div>
+                <div class="step-body">
+                    <div class="step-title">Train AI Model</div>
+                    <div class="step-desc">Building TF-IDF vectors and similarity matrix</div>
+                </div>
+            </div>
+            <div class="step" id="step4">
+                <div class="step-dot" id="dot4">4</div>
+                <div class="step-body">
+                    <div class="step-title">Ready</div>
+                    <div class="step-desc">System prepared for recommendations</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-row" id="statusRow">
+            <div class="mini-spinner" id="miniSpinner"></div>
+            <span id="statusText">Connecting to server…</span>
+        </div>
+
+        <div class="error-box"   id="errorBox"></div>
+        <button class="retry-btn" id="retryBtn" onclick="location.reload()">Try Again</button>
+
+    </div>
+
+    <script>
+        let checks = 0;
+        const MAX  = 30;
+
+        function setProgress(pct, activeStep, msg) {
+            document.getElementById('progressFill').style.width = pct + '%';
+            document.getElementById('progressPct').textContent  = Math.floor(pct) + '%';
+            document.getElementById('progressMsg').textContent  = msg;
+            document.getElementById('statusText').textContent   = msg;
+
+            for (let i = 1; i <= 4; i++) {
+                const s = document.getElementById('step' + i);
+                const d = document.getElementById('dot'  + i);
+                s.className = 'step';
+                if (i < activeStep) {
+                    s.classList.add('done');
+                    d.textContent = '✓';
+                } else if (i === activeStep) {
+                    s.classList.add('active');
+                    d.textContent = i;
+                } else {
+                    d.textContent = i;
+                }
+            }
+        }
+
+        function showError(msg) {
+            const eb = document.getElementById('errorBox');
+            eb.textContent = msg;
+            eb.style.display = 'block';
+            document.getElementById('retryBtn').style.display = 'block';
+            document.getElementById('miniSpinner').style.display = 'none';
+            document.getElementById('statusText').textContent = 'Initialisation failed';
+            document.getElementById('progressPct').textContent = '–';
+        }
+
+        function checkStatus() {
+            checks++;
+            fetch('/api/health')
+                .then(r => r.json())
+                .then(data => {
+                    if (data.status === 'healthy' && data.model_initialized) {
+                        setProgress(100, 5, 'All done — redirecting…');
+                        setTimeout(() => window.location.href = '/', 900);
+                    } else if (data.status === 'initializing') {
+                        let pct = 10, step = 1, msg = 'Initialising system…';
+                        if (data.database_initialized) { pct = 30; step = 2; msg = 'Database ready. Loading jobs…'; }
+                        if (data.jobs_loaded)           { pct = 58; step = 3; msg = 'Jobs loaded. Training model…'; }
+                        if (data.model_training)        { pct = 78; step = 3; msg = 'Training in progress — almost there…'; }
+                        setProgress(pct, step, msg);
+                        if (checks < MAX) setTimeout(checkStatus, 1000);
+                        else showError('Taking longer than expected. Please refresh.');
+                    } else {
+                        showError(data.error || 'Failed to initialise system.');
+                    }
+                })
+                .catch(() => {
+                    if (checks < MAX) setTimeout(checkStatus, 1000);
+                    else showError('Cannot connect to server. Make sure the app is running.');
+                });
+        }
+
+        setTimeout(checkStatus, 800);
+    </script>
+</body>
+</html>

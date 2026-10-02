@@ -1,0 +1,628 @@
+2026-03-29 21:03:39,964 - __main__ - INFO - Starting application initialization...
+2026-03-29 21:03:39,967 - __main__ - INFO - ==================================================
+2026-03-29 21:03:39,967 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-29 21:03:39,968 - __main__ - INFO - ==================================================
+2026-03-29 21:03:39,968 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-29 21:03:39,968 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-29 21:03:39,968 - __main__ - INFO - ==================================================
+2026-03-29 21:03:40,014 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.203.29.226:5000
+2026-03-29 21:03:40,015 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 21:03:40,036 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-29 21:03:40,098 - __main__ - INFO - Database tables created/verified
+2026-03-29 21:03:40,122 - __main__ - INFO - Loading jobs into database...
+2026-03-29 21:03:40,137 - load_data - INFO - Loaded 31 jobs from CSV
+2026-03-29 21:03:40,170 - load_data - INFO - ✓ Inserted 31 jobs into database
+2026-03-29 21:03:40,170 - __main__ - INFO - Jobs loaded successfully
+2026-03-29 21:03:40,176 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-29 21:03:40,176 - __main__ - INFO - Model loaded from disk successfully
+2026-03-29 21:03:40,176 - __main__ - INFO - Application initialization complete!
+2026-03-29 21:03:42,043 - __main__ - INFO - Starting application initialization...
+2026-03-29 21:03:42,045 - __main__ - INFO - ==================================================
+2026-03-29 21:03:42,046 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-29 21:03:42,046 - __main__ - INFO - ==================================================
+2026-03-29 21:03:42,047 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-29 21:03:42,048 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-29 21:03:42,049 - __main__ - INFO - Database tables created/verified
+2026-03-29 21:03:42,049 - __main__ - INFO - ==================================================
+2026-03-29 21:03:42,075 - __main__ - INFO - Found 31 existing jobs
+2026-03-29 21:03:42,083 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-29 21:03:42,083 - __main__ - INFO - Model loaded from disk successfully
+2026-03-29 21:03:42,084 - __main__ - INFO - Application initialization complete!
+2026-03-29 21:03:42,089 - werkzeug - WARNING -  * Debugger is active!
+2026-03-29 21:03:42,096 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-29 21:03:50,678 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:03:50] "GET / HTTP/1.1" 200 -
+2026-03-29 21:03:51,435 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:03:51] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-29 21:03:51,689 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:03:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-29 21:04:19,283 - __main__ - INFO - Processing recommendation request - Skills: Python, Machine Learning, SQL, MongoDB...
+2026-03-29 21:04:19,329 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-29 21:04:19,330 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:04:19] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-29 21:04:22,777 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-29 21:04:22,780 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:04:22,784 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:04:22,788 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:04:22,789 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:04:22] "POST /api/skill_gap HTTP/1.1" 200 -
+2026-03-29 21:05:28,901 - __main__ - INFO - Starting application initialization...
+2026-03-29 21:05:28,903 - __main__ - INFO - ==================================================
+2026-03-29 21:05:28,907 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-29 21:05:28,906 - __main__ - INFO - Database tables created/verified
+2026-03-29 21:05:28,907 - __main__ - INFO - ==================================================
+2026-03-29 21:05:28,931 - __main__ - INFO - Found 31 existing jobs
+2026-03-29 21:05:28,931 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-29 21:05:28,932 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-29 21:05:28,933 - __main__ - INFO - ==================================================
+2026-03-29 21:05:28,939 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-29 21:05:28,939 - __main__ - INFO - Model loaded from disk successfully
+2026-03-29 21:05:28,943 - __main__ - INFO - Application initialization complete!
+2026-03-29 21:05:28,972 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.203.29.226:5000
+2026-03-29 21:05:28,973 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 21:05:28,987 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-29 21:05:30,621 - __main__ - INFO - Starting application initialization...
+2026-03-29 21:05:30,623 - __main__ - INFO - ==================================================
+2026-03-29 21:05:30,623 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-29 21:05:30,624 - __main__ - INFO - ==================================================
+2026-03-29 21:05:30,625 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-29 21:05:30,625 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-29 21:05:30,625 - __main__ - INFO - Database tables created/verified
+2026-03-29 21:05:30,626 - __main__ - INFO - ==================================================
+2026-03-29 21:05:30,646 - __main__ - INFO - Found 31 existing jobs
+2026-03-29 21:05:30,651 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-29 21:05:30,658 - werkzeug - WARNING -  * Debugger is active!
+2026-03-29 21:05:30,659 - __main__ - INFO - Model loaded from disk successfully
+2026-03-29 21:05:30,660 - __main__ - INFO - Application initialization complete!
+2026-03-29 21:05:30,662 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-29 21:05:34,029 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:05:34] "GET / HTTP/1.1" 200 -
+2026-03-29 21:05:34,213 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:05:34] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-29 21:05:34,227 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:05:34] "GET /api/health HTTP/1.1" 200 -
+2026-03-29 21:06:09,749 - __main__ - INFO - Starting application initialization...
+2026-03-29 21:06:09,752 - __main__ - INFO - ==================================================
+2026-03-29 21:06:09,753 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-29 21:06:09,753 - __main__ - INFO - ==================================================
+2026-03-29 21:06:09,754 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-29 21:06:09,755 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-29 21:06:09,756 - __main__ - INFO - ==================================================
+2026-03-29 21:06:09,755 - __main__ - INFO - Database tables created/verified
+2026-03-29 21:06:09,781 - __main__ - INFO - Found 31 existing jobs
+2026-03-29 21:06:09,786 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-29 21:06:09,787 - __main__ - INFO - Model loaded from disk successfully
+2026-03-29 21:06:09,787 - __main__ - INFO - Application initialization complete!
+2026-03-29 21:06:09,801 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.203.29.226:5000
+2026-03-29 21:06:09,802 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 21:06:09,814 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-29 21:06:11,539 - __main__ - INFO - Starting application initialization...
+2026-03-29 21:06:11,542 - __main__ - INFO - ==================================================
+2026-03-29 21:06:11,542 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-29 21:06:11,542 - __main__ - INFO - ==================================================
+2026-03-29 21:06:11,543 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-29 21:06:11,543 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-29 21:06:11,544 - __main__ - INFO - ==================================================
+2026-03-29 21:06:11,544 - __main__ - INFO - Database tables created/verified
+2026-03-29 21:06:11,568 - __main__ - INFO - Found 31 existing jobs
+2026-03-29 21:06:11,573 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-29 21:06:11,574 - __main__ - INFO - Model loaded from disk successfully
+2026-03-29 21:06:11,574 - __main__ - INFO - Application initialization complete!
+2026-03-29 21:06:11,579 - werkzeug - WARNING -  * Debugger is active!
+2026-03-29 21:06:11,583 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-29 21:06:14,378 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:06:14] "GET / HTTP/1.1" 200 -
+2026-03-29 21:06:14,525 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:06:14] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-29 21:06:14,540 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:06:14] "GET /api/health HTTP/1.1" 200 -
+2026-03-29 21:06:37,947 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:06:37] "GET / HTTP/1.1" 200 -
+2026-03-29 21:06:37,993 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:06:37] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-29 21:06:38,003 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:06:38] "GET /api/health HTTP/1.1" 200 -
+2026-03-29 21:06:50,394 - __main__ - INFO - Processing recommendation request - Skills: Python< SQL...
+2026-03-29 21:06:50,440 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-29 21:06:50,442 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:06:50] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-29 21:06:52,829 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-29 21:06:52,835 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:06:52,843 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:06:52,852 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:06:52,854 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:06:52] "POST /api/skill_gap HTTP/1.1" 200 -
+2026-03-29 21:07:07,371 - __main__ - INFO - Processing recommendation request - Skills: php,
+ruby,
+go,
+python,
+c#...
+2026-03-29 21:07:07,384 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-29 21:07:07,386 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:07:07] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-29 21:30:50,426 - __main__ - INFO - Starting application initialization...
+2026-03-29 21:30:50,431 - __main__ - INFO - ==================================================
+2026-03-29 21:30:50,432 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-29 21:30:50,433 - __main__ - INFO - ==================================================
+2026-03-29 21:30:50,433 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-29 21:30:50,433 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-29 21:30:50,434 - __main__ - INFO - ==================================================
+2026-03-29 21:30:50,446 - __main__ - INFO - Database tables created/verified
+2026-03-29 21:30:50,469 - __main__ - INFO - Found 31 existing jobs
+2026-03-29 21:30:50,478 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-29 21:30:50,479 - __main__ - INFO - Model loaded from disk successfully
+2026-03-29 21:30:50,480 - __main__ - INFO - Application initialization complete!
+2026-03-29 21:30:50,526 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.203.29.226:5000
+2026-03-29 21:30:50,526 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-29 21:30:50,558 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-29 21:30:52,435 - __main__ - INFO - Starting application initialization...
+2026-03-29 21:30:52,439 - __main__ - INFO - ==================================================
+2026-03-29 21:30:52,440 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-29 21:30:52,441 - __main__ - INFO - ==================================================
+2026-03-29 21:30:52,441 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-29 21:30:52,443 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-29 21:30:52,444 - __main__ - INFO - ==================================================
+2026-03-29 21:30:52,444 - __main__ - INFO - Database tables created/verified
+2026-03-29 21:30:52,481 - __main__ - INFO - Found 31 existing jobs
+2026-03-29 21:30:52,490 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-29 21:30:52,491 - __main__ - INFO - Model loaded from disk successfully
+2026-03-29 21:30:52,492 - __main__ - INFO - Application initialization complete!
+2026-03-29 21:30:52,500 - werkzeug - WARNING -  * Debugger is active!
+2026-03-29 21:30:52,509 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-29 21:30:56,096 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:30:56] "GET / HTTP/1.1" 200 -
+2026-03-29 21:30:56,509 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:30:56] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-29 21:30:56,622 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:30:56] "GET /api/health HTTP/1.1" 200 -
+2026-03-29 21:31:28,876 - __main__ - INFO - Processing recommendation request - Skills: React, HTML,CSS, Javascript...
+2026-03-29 21:31:28,929 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-29 21:31:28,930 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:31:28] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-29 21:31:38,034 - __main__ - INFO - Processing recommendation request - Skills: React, HTML,CSS, Javascript, Angular...
+2026-03-29 21:31:38,045 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-29 21:31:38,050 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:31:38] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-29 21:31:48,402 - __main__ - INFO - Processing recommendation request - Skills: React, HTML,CSS, Javascript, Angular, Node.js...
+2026-03-29 21:31:48,414 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-29 21:31:48,416 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:31:48] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-29 21:32:14,946 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-29 21:32:14,952 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:32:14,957 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:32:14,962 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:32:14,963 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:32:14] "POST /api/skill_gap HTTP/1.1" 200 -
+2026-03-29 21:32:32,412 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:32:32] "GET / HTTP/1.1" 200 -
+2026-03-29 21:32:32,493 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:32:32] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-29 21:32:32,504 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:32:32] "GET /api/health HTTP/1.1" 200 -
+2026-03-29 21:32:45,589 - __main__ - INFO - Processing recommendation request - Skills: Python, MachineLearning, SQL...
+2026-03-29 21:32:45,632 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-29 21:32:45,635 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:32:45] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-29 21:32:49,807 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-29 21:32:49,818 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:32:49,835 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:32:49,847 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:32:49,852 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:32:49] "POST /api/skill_gap HTTP/1.1" 200 -
+2026-03-29 21:33:02,766 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-29 21:33:02,773 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:33:02,783 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:33:02,793 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-29 21:33:02,796 - werkzeug - INFO - 127.0.0.1 - - [29/Mar/2026 21:33:02] "POST /api/skill_gap HTTP/1.1" 200 -
+2026-03-30 11:09:41,025 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:09:41,048 - __main__ - INFO - ==================================================
+2026-03-30 11:09:41,050 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:09:41,051 - __main__ - INFO - ==================================================
+2026-03-30 11:09:41,051 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:09:41,053 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:09:41,057 - __main__ - INFO - ==================================================
+2026-03-30 11:09:41,077 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:09:41,163 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 11:09:41,180 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:09:41,182 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:09:41,182 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:09:41,388 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.203.29.226:5000
+2026-03-30 11:09:41,389 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-30 11:09:41,576 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-30 11:09:44,732 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:09:44,741 - __main__ - INFO - ==================================================
+2026-03-30 11:09:44,744 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:09:44,745 - __main__ - INFO - ==================================================
+2026-03-30 11:09:44,745 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:09:44,746 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:09:44,747 - __main__ - INFO - ==================================================
+2026-03-30 11:09:44,750 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:09:44,814 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 11:09:44,826 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:09:44,827 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:09:44,827 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:09:44,835 - werkzeug - WARNING -  * Debugger is active!
+2026-03-30 11:09:44,855 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-30 11:10:04,674 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:10:04] "GET / HTTP/1.1" 200 -
+2026-03-30 11:10:06,208 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:10:06] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-30 11:10:11,258 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:10:11] "GET /api/health HTTP/1.1" 200 -
+2026-03-30 11:10:12,191 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:10:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-30 11:10:39,266 - __main__ - INFO - Processing recommendation request - Skills: Python, MachineLearning, SQL, OpenCV...
+2026-03-30 11:10:39,429 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 11:10:39,432 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:10:39] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 11:11:06,170 - __main__ - INFO - Processing recommendation request - Skills: Python, MachineLearning, SQL, OpenCV, Spark, BigQu...
+2026-03-30 11:11:06,181 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 11:11:06,187 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:11:06] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 11:11:11,865 - __main__ - INFO - Processing recommendation request - Skills: Python, MachineLearning, SQL, OpenCV, Spark, BigQu...
+2026-03-30 11:11:11,882 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 11:11:11,888 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:11:11] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 11:11:21,543 - __main__ - INFO - Processing recommendation request - Skills: Python, MachineLearning, SQL, OpenCV, Spark, BigQu...
+2026-03-30 11:11:21,562 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 11:11:21,673 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:11:21] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 11:11:42,626 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-30 11:11:42,639 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 11:11:42,678 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 11:11:42,706 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 11:11:42,712 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:11:42] "POST /api/skill_gap HTTP/1.1" 200 -
+2026-03-30 11:12:13,441 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:12:13] "GET / HTTP/1.1" 200 -
+2026-03-30 11:12:13,608 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:12:13] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-30 11:12:13,624 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:12:13] "GET /api/health HTTP/1.1" 200 -
+2026-03-30 11:12:30,358 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sonus\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\_typing\\_nbit.py', reloading
+2026-03-30 11:12:32,027 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-30 11:12:37,874 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:12:37,881 - __main__ - INFO - ==================================================
+2026-03-30 11:12:37,899 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:12:37,899 - __main__ - INFO - ==================================================
+2026-03-30 11:12:37,901 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:12:37,902 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:12:37,902 - __main__ - INFO - ==================================================
+2026-03-30 11:12:37,921 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:12:37,983 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 11:12:38,001 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:12:38,001 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:12:38,002 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:12:38,009 - werkzeug - WARNING -  * Debugger is active!
+2026-03-30 11:12:38,030 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-30 11:13:31,010 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:13:31,015 - __main__ - INFO - ==================================================
+2026-03-30 11:13:31,017 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:13:31,018 - __main__ - INFO - ==================================================
+2026-03-30 11:13:31,018 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:13:31,019 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:13:31,019 - __main__ - INFO - ==================================================
+2026-03-30 11:13:31,027 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:13:31,055 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 11:13:31,067 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:13:31,068 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:13:31,071 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:13:31,109 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.203.29.226:5000
+2026-03-30 11:13:31,110 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-30 11:13:31,133 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-30 11:13:33,968 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:13:33,972 - __main__ - INFO - ==================================================
+2026-03-30 11:13:33,973 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:13:33,973 - __main__ - INFO - ==================================================
+2026-03-30 11:13:33,974 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:13:33,975 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:13:33,975 - __main__ - INFO - ==================================================
+2026-03-30 11:13:33,975 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:13:33,998 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 11:13:34,007 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:13:34,007 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:13:34,008 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:13:34,016 - werkzeug - WARNING -  * Debugger is active!
+2026-03-30 11:13:34,026 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-30 11:13:41,669 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 11:13:41] "GET / HTTP/1.1" 200 -
+2026-03-30 11:13:42,218 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 11:13:42] "GET /static/style.css HTTP/1.1" 200 -
+2026-03-30 11:13:43,047 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 11:13:43] "GET /api/health HTTP/1.1" 200 -
+2026-03-30 11:13:49,358 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 11:13:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-30 11:32:44,648 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:32:44,652 - __main__ - INFO - ==================================================
+2026-03-30 11:32:44,655 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:32:44,656 - __main__ - INFO - ==================================================
+2026-03-30 11:32:44,657 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:32:44,657 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:32:44,658 - __main__ - INFO - ==================================================
+2026-03-30 11:32:44,679 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:32:44,711 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 11:32:44,725 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:32:44,726 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:32:44,731 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:32:44,758 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.203.29.226:5000
+2026-03-30 11:32:44,760 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-30 11:32:44,796 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-30 11:32:47,967 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:32:47,970 - __main__ - INFO - ==================================================
+2026-03-30 11:32:47,972 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:32:47,973 - __main__ - INFO - ==================================================
+2026-03-30 11:32:47,974 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:32:47,975 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:32:47,975 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:32:47,976 - __main__ - INFO - ==================================================
+2026-03-30 11:32:48,028 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 11:32:48,041 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:32:48,042 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:32:48,043 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:32:48,100 - werkzeug - WARNING -  * Debugger is active!
+2026-03-30 11:32:48,141 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-30 11:32:48,646 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:32:48] "GET / HTTP/1.1" 200 -
+2026-03-30 11:32:49,073 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:32:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-30 11:32:49,125 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:32:49] "GET /api/health HTTP/1.1" 200 -
+2026-03-30 11:32:53,634 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 11:32:53] "GET /api/health HTTP/1.1" 200 -
+2026-03-30 11:36:00,083 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:36:00,088 - __main__ - INFO - ==================================================
+2026-03-30 11:36:00,090 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:36:00,091 - __main__ - INFO - ==================================================
+2026-03-30 11:36:00,091 - __main__ - INFO - Project directory: C:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:36:00,091 - __main__ - INFO - Database path: sqlite:///C:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:36:00,092 - __main__ - INFO - ==================================================
+2026-03-30 11:36:00,181 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.203.29.226:5000
+2026-03-30 11:36:00,182 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-30 11:36:00,224 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-30 11:36:00,313 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:36:00,353 - __main__ - INFO - Loading jobs into database...
+2026-03-30 11:36:00,394 - load_data - INFO - Loaded 31 jobs from CSV
+2026-03-30 11:36:00,458 - load_data - INFO - ✓ Inserted 31 jobs into database
+2026-03-30 11:36:00,459 - __main__ - INFO - Jobs loaded successfully
+2026-03-30 11:36:00,472 - model - INFO - ✓ Model loaded from C:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:36:00,472 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:36:00,472 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:36:03,078 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:36:03,080 - __main__ - INFO - ==================================================
+2026-03-30 11:36:03,081 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:36:03,082 - __main__ - INFO - ==================================================
+2026-03-30 11:36:03,085 - __main__ - INFO - Project directory: C:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:36:03,085 - __main__ - INFO - Database path: sqlite:///C:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:36:03,086 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:36:03,087 - __main__ - INFO - ==================================================
+2026-03-30 11:36:03,145 - werkzeug - WARNING -  * Debugger is active!
+2026-03-30 11:36:03,179 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 11:36:03,186 - model - INFO - ✓ Model loaded from C:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:36:03,186 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:36:03,187 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:36:03,188 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-30 11:37:03,746 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sonus\\OneDrive\\Desktop\\job_recommend_system\\populate_database.py', reloading
+2026-03-30 11:37:04,719 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-30 11:37:10,942 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:37:10,949 - __main__ - INFO - ==================================================
+2026-03-30 11:37:10,952 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:37:10,955 - __main__ - INFO - ==================================================
+2026-03-30 11:37:10,958 - __main__ - INFO - Project directory: C:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:37:10,960 - __main__ - INFO - Database path: sqlite:///C:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:37:10,963 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:37:10,964 - __main__ - INFO - ==================================================
+2026-03-30 11:37:11,046 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 11:37:11,060 - model - INFO - ✓ Model loaded from C:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:37:11,061 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:37:11,062 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:37:11,084 - werkzeug - WARNING -  * Debugger is active!
+2026-03-30 11:37:11,102 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-30 11:37:12,264 - werkzeug - INFO -  * Detected change in 'C:\\Users\\sonus\\OneDrive\\Desktop\\job_recommend_system\\populate_database.py', reloading
+2026-03-30 11:37:12,807 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-30 11:37:16,502 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:37:16,507 - __main__ - INFO - ==================================================
+2026-03-30 11:37:16,510 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:37:16,511 - __main__ - INFO - ==================================================
+2026-03-30 11:37:16,511 - __main__ - INFO - Project directory: C:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:37:16,513 - __main__ - INFO - Database path: sqlite:///C:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:37:16,513 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:37:16,524 - __main__ - INFO - ==================================================
+2026-03-30 11:37:16,605 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 11:37:16,617 - model - INFO - ✓ Model loaded from C:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:37:16,618 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:37:16,620 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:37:16,631 - werkzeug - WARNING -  * Debugger is active!
+2026-03-30 11:37:16,638 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-30 11:38:09,963 - __main__ - INFO - Starting application initialization...
+2026-03-30 11:38:09,973 - __main__ - INFO - ==================================================
+2026-03-30 11:38:09,974 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 11:38:09,977 - __main__ - INFO - ==================================================
+2026-03-30 11:38:09,981 - __main__ - INFO - Database tables created/verified
+2026-03-30 11:38:09,982 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 11:38:10,026 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 11:38:10,027 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 11:38:10,027 - __main__ - INFO - ==================================================
+2026-03-30 11:38:10,038 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 11:38:10,040 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 11:38:10,040 - __main__ - INFO - Application initialization complete!
+2026-03-30 11:38:10,079 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.203.29.226:5000
+2026-03-30 11:38:10,079 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-30 11:38:10,104 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-30 14:49:57,620 - __main__ - INFO - Starting application initialization...
+2026-03-30 14:49:57,624 - __main__ - INFO - ==================================================
+2026-03-30 14:49:57,629 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 14:49:57,630 - __main__ - INFO - ==================================================
+2026-03-30 14:49:57,631 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 14:49:57,631 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 14:49:57,632 - __main__ - INFO - ==================================================
+2026-03-30 14:49:57,649 - __main__ - INFO - Database tables created/verified
+2026-03-30 14:49:57,688 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 14:49:57,702 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 14:49:57,704 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 14:49:57,704 - __main__ - INFO - Application initialization complete!
+2026-03-30 14:50:02,368 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.203.29.226:5000
+2026-03-30 14:50:02,369 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-30 14:50:02,420 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-30 14:50:05,262 - __main__ - INFO - Starting application initialization...
+2026-03-30 14:50:05,266 - __main__ - INFO - ==================================================
+2026-03-30 14:50:05,267 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 14:50:05,267 - __main__ - INFO - ==================================================
+2026-03-30 14:50:05,267 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 14:50:05,267 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 14:50:05,268 - __main__ - INFO - ==================================================
+2026-03-30 14:50:05,271 - __main__ - INFO - Database tables created/verified
+2026-03-30 14:50:05,313 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 14:50:05,326 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 14:50:05,326 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 14:50:05,328 - __main__ - INFO - Application initialization complete!
+2026-03-30 14:50:05,335 - werkzeug - WARNING -  * Debugger is active!
+2026-03-30 14:50:05,347 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-30 14:50:12,087 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:50:12] "GET / HTTP/1.1" 200 -
+2026-03-30 14:50:12,530 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:50:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-30 14:50:13,036 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:50:13] "GET /api/health HTTP/1.1" 200 -
+2026-03-30 14:50:21,571 - __main__ - INFO - Processing recommendation request - Skills: Python, Machine Learning, SQL...
+2026-03-30 14:50:21,619 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:50:21,621 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:50:21] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:50:32,052 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:50:32] "GET / HTTP/1.1" 200 -
+2026-03-30 14:50:46,086 - __main__ - INFO - Processing recommendation request - Skills: Python, Machine Learning, SQL, DeepLearning, pytor...
+2026-03-30 14:50:46,103 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:50:46,103 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:50:46] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:50:50,998 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:50:50] "[31m[1mGET / HTTP/1.1[0m" 400 -
+2026-03-30 14:50:51,013 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:50:51] "[33mGET /loginMsg.js HTTP/1.1[0m" 404 -
+2026-03-30 14:50:51,031 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:50:51] "[33mGET /cgi/get.cgi?cmd=home_login HTTP/1.1[0m" 404 -
+2026-03-30 14:50:58,033 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:50:58] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2026-03-30 14:50:58,611 - __main__ - INFO - Processing recommendation request - Skills: Python, Machine Learning, SQL, DeepLearning, pytor...
+2026-03-30 14:50:58,626 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:50:58,627 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:50:58] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:51:23,033 - __main__ - INFO - Processing recommendation request - Skills: React, JavaScript, HTML/CSS...
+2026-03-30 14:51:23,047 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:51:23,050 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:51:23] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:51:35,367 - __main__ - INFO - Processing recommendation request - Skills: AWS, Docker, Kubernetes...
+2026-03-30 14:51:35,378 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:51:35,380 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:51:35] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:51:46,780 - __main__ - INFO - Processing recommendation request - Skills: Java, Spring Boot, Microservices...
+2026-03-30 14:51:46,792 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:51:46,794 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:51:46] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:51:56,085 - __main__ - INFO - Processing recommendation request - Skills: Figma, UI Design, Prototyping...
+2026-03-30 14:51:56,096 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:51:56,101 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:51:56] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:52:10,666 - __main__ - INFO - Processing recommendation request - Skills: Python, Machine Learning, SQL...
+2026-03-30 14:52:10,678 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:52:10,680 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:52:10] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:52:11,656 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-30 14:52:11,662 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 14:52:11,671 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 14:52:11,679 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 14:52:11,680 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:52:11] "POST /api/skill_gap HTTP/1.1" 200 -
+2026-03-30 14:52:52,850 - __main__ - INFO - Created new user: Test User (test@example.com)
+2026-03-30 14:52:52,850 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:52:52] "[35m[1mPOST /api/users HTTP/1.1[0m" 201 -
+2026-03-30 14:53:05,243 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:53:05] "GET /api/jobs HTTP/1.1" 200 -
+2026-03-30 14:53:15,444 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:53:15] "GET /api/categories HTTP/1.1" 200 -
+2026-03-30 14:53:26,363 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:53:26] "GET /api/health HTTP/1.1" 200 -
+2026-03-30 14:53:56,055 - __main__ - INFO - Created new user: John Doe (john@example.com)
+2026-03-30 14:53:56,058 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:53:56] "[35m[1mPOST /api/users HTTP/1.1[0m" 201 -
+2026-03-30 14:54:05,253 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:54:05] "GET /api/users/1 HTTP/1.1" 200 -
+2026-03-30 14:54:15,297 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:54:15] "GET /api/users/2 HTTP/1.1" 200 -
+2026-03-30 14:54:25,392 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:54:25] "GET /api/users/1/recommendations HTTP/1.1" 200 -
+2026-03-30 14:57:28,431 - __main__ - INFO - Starting application initialization...
+2026-03-30 14:57:28,442 - __main__ - INFO - ==================================================
+2026-03-30 14:57:28,445 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 14:57:28,447 - __main__ - INFO - ==================================================
+2026-03-30 14:57:28,449 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 14:57:28,449 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 14:57:28,450 - __main__ - INFO - ==================================================
+2026-03-30 14:57:28,484 - __main__ - INFO - Database tables created/verified
+2026-03-30 14:57:28,563 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 14:57:28,589 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 14:57:28,590 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 14:57:28,591 - __main__ - INFO - Application initialization complete!
+2026-03-30 14:57:28,672 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.203.29.226:5000
+2026-03-30 14:57:28,674 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-03-30 14:57:28,745 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2026-03-30 14:57:33,533 - __main__ - INFO - Starting application initialization...
+2026-03-30 14:57:33,540 - __main__ - INFO - ==================================================
+2026-03-30 14:57:33,541 - __main__ - INFO - AI Job Recommendation System Starting...
+2026-03-30 14:57:33,542 - __main__ - INFO - ==================================================
+2026-03-30 14:57:33,543 - __main__ - INFO - Project directory: c:\Users\sonus\OneDrive\Desktop\job_recommend_system
+2026-03-30 14:57:33,544 - __main__ - INFO - Database path: sqlite:///c:\Users\sonus\OneDrive\Desktop\job_recommend_system/job_recommendation.db
+2026-03-30 14:57:33,545 - __main__ - INFO - ==================================================
+2026-03-30 14:57:33,545 - __main__ - INFO - Database tables created/verified
+2026-03-30 14:57:33,589 - __main__ - INFO - Found 31 existing jobs
+2026-03-30 14:57:33,602 - model - INFO - ✓ Model loaded from c:\Users\sonus\OneDrive\Desktop\job_recommend_system\models\job_recommender.pkl
+2026-03-30 14:57:33,604 - __main__ - INFO - Model loaded from disk successfully
+2026-03-30 14:57:33,605 - __main__ - INFO - Application initialization complete!
+2026-03-30 14:57:33,618 - werkzeug - WARNING -  * Debugger is active!
+2026-03-30 14:57:33,633 - werkzeug - INFO -  * Debugger PIN: 109-069-286
+2026-03-30 14:57:37,058 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:57:37] "GET / HTTP/1.1" 200 -
+2026-03-30 14:57:38,598 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2026 14:57:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-30 14:57:38,884 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:57:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2026-03-30 14:57:38,987 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:57:38] "GET /api/health HTTP/1.1" 200 -
+2026-03-30 14:57:40,010 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:57:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-30 14:58:25,398 - __main__ - INFO - Processing recommendation request - Skills: Python, MachineLearning, SQL, DeepLearning, pytorc...
+2026-03-30 14:58:25,466 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:58:25,471 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:58:25] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:58:32,907 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-30 14:58:32,913 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 14:58:32,925 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 14:58:32,944 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 14:58:32,951 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:58:32] "POST /api/skill_gap HTTP/1.1" 200 -
+2026-03-30 14:59:10,686 - __main__ - INFO - Processing recommendation request - Skills: HTML, CSS, JavaScript, React...
+2026-03-30 14:59:10,708 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:59:10,712 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:59:10] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:59:18,642 - __main__ - INFO - Processing recommendation request - Skills: HTML, CSS, JavaScript, React...
+2026-03-30 14:59:18,655 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:59:18,658 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:59:18] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:59:22,638 - __main__ - INFO - Processing recommendation request - Skills: HTML, CSS, JavaScript, React...
+2026-03-30 14:59:22,645 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 14:59:22,647 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:59:22] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 14:59:28,311 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-30 14:59:28,320 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 14:59:28,330 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 14:59:28,351 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 14:59:28,355 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 14:59:28] "POST /api/skill_gap HTTP/1.1" 200 -
+2026-03-30 15:00:08,124 - __main__ - INFO - Processing recommendation request - Skills: AWS, Kubernetes, Docker...
+2026-03-30 15:00:08,146 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:00:08,151 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:00:08] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:00:16,646 - __main__ - INFO - Processing recommendation request - Skills: AWS, Kubernetes, Docker, Terraform...
+2026-03-30 15:00:16,728 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:00:16,728 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:00:16] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:00:19,789 - __main__ - INFO - Processing recommendation request - Skills: AWS, Kubernetes, Docker, Terraform...
+2026-03-30 15:00:19,805 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:00:19,807 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:00:19] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:00:32,321 - __main__ - INFO - Processing recommendation request - Skills: AWS, Kubernetes, Docker, Terraform. CI/CD...
+2026-03-30 15:00:32,336 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:00:32,339 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:00:32] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:00:40,115 - __main__ - INFO - Processing recommendation request - Skills: AWS, Kubernetes, Docker, Terraform. CI/CD...
+2026-03-30 15:00:40,134 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:00:40,136 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:00:40] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:01:01,475 - __main__ - INFO - Processing recommendation request - Skills: AWS, Kubernetes, Docker, Terraform. CI/CD, Azure...
+2026-03-30 15:01:01,495 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:01:01,502 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:01:01] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:01:04,582 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-30 15:01:04,585 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 15:01:04,595 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 15:01:04,600 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 15:01:04,602 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:01:04] "POST /api/skill_gap HTTP/1.1" 200 -
+2026-03-30 15:01:34,120 - __main__ - INFO - Processing recommendation request - Skills: Java. SpringBoot, Microservices...
+2026-03-30 15:01:34,135 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:01:34,140 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:01:34] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:01:41,848 - __main__ - INFO - Processing recommendation request - Skills: Java. Spring Boot, Microservices...
+2026-03-30 15:01:41,861 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:01:41,862 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:01:41] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:02:05,053 - __main__ - INFO - Processing recommendation request - Skills: Figma, UI Design, prototyping...
+2026-03-30 15:02:05,079 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:02:05,085 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:02:05] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:02:14,654 - __main__ - INFO - Processing recommendation request - Skills: Figma, UI Design, prototyping, wireframing...
+2026-03-30 15:02:14,666 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:02:14,670 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:02:14] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:02:34,875 - __main__ - INFO - Processing recommendation request - Skills: Figma, UI Design, prototyping, wireframing, Sketch...
+2026-03-30 15:02:34,889 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:02:34,892 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:02:34] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:02:36,982 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-30 15:02:36,997 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 15:02:37,006 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 15:02:37,015 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 15:02:37,021 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:02:37] "POST /api/skill_gap HTTP/1.1" 200 -
+2026-03-30 15:03:31,495 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:03:31] "[31m[1mPOST /api/users HTTP/1.1[0m" 400 -
+2026-03-30 15:03:36,227 - __main__ - INFO - Created new user: Test1 (test@example1.com)
+2026-03-30 15:03:36,229 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:03:36] "[35m[1mPOST /api/users HTTP/1.1[0m" 201 -
+2026-03-30 15:04:08,526 - __main__ - INFO - Created new user: user2 (user2@example3.com)
+2026-03-30 15:04:08,528 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:04:08] "[35m[1mPOST /api/users HTTP/1.1[0m" 201 -
+2026-03-30 15:04:52,488 - __main__ - INFO - Processing recommendation request - Skills: penetration test, cryptography, networking...
+2026-03-30 15:04:52,515 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:04:52,519 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:04:52] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:05:06,615 - __main__ - INFO - Processing recommendation request - Skills: penetration testing, cryptography, network securit...
+2026-03-30 15:05:06,637 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:05:06,640 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:05:06] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:05:10,511 - __main__ - INFO - Processing recommendation request - Skills: penetration testing, cryptography, network securit...
+2026-03-30 15:05:10,522 - model - INFO - ✓ Found 10 recommendations based on skills
+2026-03-30 15:05:10,527 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:05:10] "POST /api/recommend HTTP/1.1" 200 -
+2026-03-30 15:05:15,185 - model - INFO - ✓ Found 3 recommendations based on skills
+2026-03-30 15:05:15,197 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 15:05:15,214 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 15:05:15,233 - model - INFO - ✓ Found 1 recommendations based on skills
+2026-03-30 15:05:15,241 - werkzeug - INFO - 10.203.29.226 - - [30/Mar/2026 15:05:15] "POST /api/skill_gap HTTP/1.1" 200 -

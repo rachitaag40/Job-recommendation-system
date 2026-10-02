@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillMatch Pro | Intelligent Career Platform</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">🎯</div>
+                <div class="logo-text">SkillMatch<span>Pro</span></div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" onclick="scrollToSection('dashboard')">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" onclick="scrollToSection('matches')">
+                    <span class="nav-icon">🎯</span>
+                    <span>Job Matches</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showStats()">
+                    <span class="nav-icon">📈</span>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item" onclick="scrollToSection('profile')">
+                    <span class="nav-icon">👤</span>
+                    <span>Profile</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="system-status">
+                    <div class="status-dot"></div>
+                    <span>System Online</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>Career Dashboard</h1>
+                    <p>Find your perfect job match with AI-powered recommendations</p>
+                </div>
+                <div class="header-right">
+                    <div class="date-display">
+                        <div class="date-number" id="currentDate">28</div>
+                        <div class="date-info">
+                            <div class="date-month" id="currentMonth">March 2026</div>
+                            <div class="date-day" id="currentDay">Sunday</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">💼</div>
+                    <div class="stat-details">
+                        <div class="stat-value" id="totalJobs">30+</div>
+                        <div class="stat-label">Active Positions</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-details">
+                        <div class="stat-value">98%</div>
+                        <div class="stat-label">Match Accuracy</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-details">
+                        <div class="stat-value">Real-time</div>
+                        <div class="stat-label">Recommendations</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-details">
+                        <div class="stat-value" id="totalMatches">0</div>
+                        <div class="stat-label">Matches Today</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Grid -->
+            <div class="dashboard-grid">
+                <!-- Input Section -->
+                <div class="card input-card">
+                    <div class="card-header">
+                        <h3>Candidate Profile</h3>
+                        <p>Enter your skills and experience</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group">
+                            <label>Technical Skills</label>
+                            <textarea id="skills-input" placeholder="Python, Machine Learning, SQL, React, AWS"></textarea>
+                            <span class="input-hint">Separate skills with commas</span>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label>Years of Experience</label>
+                            <input type="number" id="experience" min="0" max="50" step="0.5" value="2">
+                        </div>
+                        
+                        <div class="button-group">
+                            <button class="btn btn-primary" onclick="getRecommendations()">
+                                <span>🔍</span> Find Matches
+                            </button>
+                            <button class="btn btn-secondary" onclick="analyzeSkillGap()">
+                                <span>📊</span> Analyze Gap
+                            </button>
+                        </div>
+                        
+                        <div id="loading" class="loading-container" style="display: none;">
+                            <div class="spinner"></div>
+                            <p>Analyzing your skills...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="card results-card">
+                    <div class="card-header">
+                        <h3>Recommended Positions</h3>
+                        <span class="badge" id="result-count">Top Matches</span>
+                    </div>
+                    <div class="card-body results-list" id="results-container">
+                        <div class="empty-state">
+                            <p>Enter your skills above to see personalized recommendations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div id="profile" class="card profile-card">
+                <div class="card-header">
+                    <h3>Create Your Profile</h3>
+                    <p>Save your information for future recommendations</p>
+                </div>
+                <div class="card-body">
+                    <div class="profile-grid">
+                        <input type="text" id="user-name" placeholder="Full Name">
+                        <input type="email" id="user-email" placeholder="Email Address">
+                        <textarea id="user-skills" placeholder="Your Skills (comma-separated)"></textarea>
+                        <input type="number" id="user-experience" placeholder="Years of Experience">
+                        <button class="btn btn-primary" onclick="createUser()">Save Profile</button>
+                    </div>
+                    <div id="user-message" class="message-area"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="skillGapModal" class="modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Skill Gap Analysis</h3>
+                <button class="modal-close" onclick="closeSkillGapModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="skillGapContent"></div>
+        </div>
+    </div>
+
+    <div id="statsModal" class="modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>System Analytics</h3>
+                <button class="modal-close" onclick="closeStatsModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="statsContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Update date display
+        function updateDate() {
+            const now = new Date();
+            document.getElementById('currentDate').textContent = now.getDate();
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            document.getElementById('currentMonth').textContent = months[now.getMonth()] + ' ' + now.getFullYear();
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            document.getElementById('currentDay').textContent = days[now.getDay()];
+        }
+        updateDate();
+
+        async function getRecommendations() {
+            const skills = document.getElementById('skills-input').value;
+            const experience = document.getElementById('experience').value;
+            
+            if (!skills.trim()) {
+                alert('Please enter your skills');
+                return;
+            }
+            
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('results-container').innerHTML = '';
+            document.getElementById('result-count').innerHTML = 'Loading...';
+            
+            try {
+                const response = await fetch('/api/recommend', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        skills: skills,
+                        min_experience: parseFloat(experience)
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    displayRecommendations(data.recommendations);
+                    document.getElementById('totalMatches').innerHTML = data.recommendations.length;
+                    document.getElementById('result-count').innerHTML = `${data.recommendations.length} Matches`;
+                } else {
+                    showError(data.error || 'Error getting recommendations');
+                }
+            } catch (error) {
+                showError('Network error: ' + error.message);
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+            }
+        }
+        
+        function displayRecommendations(recommendations) {
+            const container = document.getElementById('results-container');
+            
+            if (!recommendations || recommendations.length === 0) {
+                container.innerHTML = `<div class="empty-state"><div class="empty-icon">🔍</div><p>No matching positions found</p></div>`;
+                return;
+            }
+            
+            let html = '';
+            recommendations.forEach((rec, index) => {
+                let scoreClass = rec.similarity_score >= 70 ? 'score-high' : (rec.similarity_score >= 50 ? 'score-medium' : 'score-low');
+                let scoreText = rec.similarity_score >= 70 ? 'Excellent' : (rec.similarity_score >= 50 ? 'Good' : 'Fair');
+                
+                const skillsList = rec.skills_required.split(',').slice(0, 5);
+                const skillTags = skillsList.map(skill => `<span class="skill-tag">${escapeHtml(skill.trim())}</span>`).join('');
+                
+                html += `
+                    <div class="job-item">
+                        <div class="job-header">
+                            <div>
+                                <h4>${index + 1}. ${escapeHtml(rec.title)}</h4>
+                                <span class="job-category">${escapeHtml(rec.category)}</span>
+                            </div>
+                            <div class="match-score ${scoreClass}">${rec.similarity_score}%</div>
+                        </div>
+                        <div class="job-skills">
+                            <div class="skill-list">${skillTags}</div>
+                        </div>
+                        <p class="job-desc">${escapeHtml(rec.description.substring(0, 100))}${rec.description.length > 100 ? '...' : ''}</p>
+                        <div class="job-footer">
+                            <span class="exp-badge">💼 ${rec.min_experience} years</span>
+                            <span class="match-badge ${scoreClass}">${scoreText} Match</span>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+        
+        async function analyzeSkillGap() {
+            const skills = document.getElementById('skills-input').value;
+            if (!skills.trim()) {
+                alert('Please enter your skills first');
+                return;
+            }
+            
+            const modal = document.getElementById('skillGapModal');
+            const content = document.getElementById('skillGapContent');
+            modal.style.display = 'flex';
+            content.innerHTML = '<div class="loading-container"><div class="spinner"></div><p>Analyzing...</p></div>';
+            
+            try {
+                const response = await fetch('/api/skill_gap', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({skills: skills})
+                });
+                const data = await response.json();
+                
+                if (response.ok && data.skill_gap_analysis) {
+                    displaySkillGapModal(data.skill_gap_analysis);
+                } else {
+                    content.innerHTML = '<div class="error-msg">Could not analyze skill gap</div>';
+                }
+            } catch (error) {
+                content.innerHTML = '<div class="error-msg">Network error</div>';
+            }
+        }
+        
+        function displaySkillGapModal(analysis) {
+            const content = document.getElementById('skillGapContent');
+            if (!analysis || analysis.length === 0) {
+                content.innerHTML = '<div class="empty-state">No analysis available</div>';
+                return;
+            }
+            
+            let html = '';
+            analysis.forEach((job, index) => {
+                html += `
+                    <div class="gap-item">
+                        <div class="gap-header">
+                            <h4>${index + 1}. ${escapeHtml(job.job_title)}</h4>
+                            <span class="match-badge ${job.match_percentage >= 70 ? 'score-high' : (job.match_percentage >= 50 ? 'score-medium' : 'score-low')}">
+                                ${job.match_percentage}%
+                            </span>
+                        </div>
+                        <div class="missing-section">
+                            <strong>Missing Skills (${job.total_missing})</strong>
+                            <div class="missing-list">
+                `;
+                
+                if (job.missing_skills && job.missing_skills.length > 0) {
+                    job.missing_skills.forEach(skill => {
+                        html += `<span class="missing-tag">${escapeHtml(skill)}</span>`;
+                    });
+                } else {
+                    html += '<span class="success-tag">✓ You have all required skills!</span>';
+                }
+                
+                html += `
+                            </div>
+                        </div>
+                        <details>
+                            <summary>View required skills</summary>
+                            <p class="required-text">${escapeHtml(job.required_skills || 'Skills not specified')}</p>
+                        </details>
+                    </div>
+                `;
+            });
+            content.innerHTML = html;
+        }
+        
+        async function showStats() {
+            const modal = document.getElementById('statsModal');
+            const content = document.getElementById('statsContent');
+            modal.style.display = 'flex';
+            content.innerHTML = '<div class="loading-container"><div class="spinner"></div><p>Loading...</p></div>';
+            
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+                content.innerHTML = `
+                    <div class="stats-list">
+                        <div class="stat-row"><span>System Status</span><span class="status-active">${data.status === 'healthy' ? 'Online' : 'Initializing'}</span></div>
+                        <div class="stat-row"><span>Active Jobs</span><span>${data.total_jobs || '30'}</span></div>
+                        <div class="stat-row"><span>Model Status</span><span class="${data.model_initialized ? 'status-active' : 'status-warning'}">${data.model_initialized ? 'Ready' : 'Loading'}</span></div>
+                        <div class="stat-row"><span>Database</span><span class="${data.database_initialized ? 'status-active' : 'status-error'}">${data.database_initialized ? 'Connected' : 'Disconnected'}</span></div>
+                    </div>
+                `;
+            } catch (error) {
+                content.innerHTML = '<div class="error-msg">Failed to load statistics</div>';
+            }
+        }
+        
+        function showError(message) {
+            const container = document.getElementById('results-container');
+            container.innerHTML = `<div class="error-msg">❌ ${escapeHtml(message)}</div>`;
+            document.getElementById('result-count').innerHTML = 'Error';
+            setTimeout(() => {
+                container.innerHTML = '<div class="empty-state"><div class="empty-icon">✨</div><p>Enter your skills above</p></div>';
+                document.getElementById('result-count').innerHTML = 'Top Matches';
+            }, 5000);
+        }
+        
+        async function createUser() {
+            const name = document.getElementById('user-name').value;
+            const email = document.getElementById('user-email').value;
+            const skills = document.getElementById('user-skills').value;
+            const experience = document.getElementById('user-experience').value;
+            
+            if (!name || !email || !skills || !experience) {
+                alert('Please fill all fields');
+                return;
+            }
+            
+            try {
+                const response = await fetch('/api/users', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({name, email, skills, experience: parseFloat(experience)})
+                });
+                const data = await response.json();
+                
+                if (response.ok) {
+                    document.getElementById('user-message').innerHTML = '<div class="success-msg">✓ Profile created successfully!</div>';
+                    document.getElementById('user-name').value = '';
+                    document.getElementById('user-email').value = '';
+                    document.getElementById('user-skills').value = '';
+                    document.getElementById('user-experience').value = '';
+                    setTimeout(() => document.getElementById('user-message').innerHTML = '', 3000);
+                } else {
+                    document.getElementById('user-message').innerHTML = `<div class="error-msg">❌ ${escapeHtml(data.error)}</div>`;
+                }
+            } catch (error) {
+                document.getElementById('user-message').innerHTML = `<div class="error-msg">❌ Network error</div>`;
+            }
+        }
+        
+        function closeSkillGapModal() { document.getElementById('skillGapModal').style.display = 'none'; }
+        function closeStatsModal() { document.getElementById('statsModal').style.display = 'none'; }
+        
+        window.onclick = function(event) {
+            if (event.target === document.getElementById('skillGapModal')) closeSkillGapModal();
+            if (event.target === document.getElementById('statsModal')) closeStatsModal();
+        }
+        
+        function scrollToSection(id) { document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }); }
+        
+        document.getElementById('skills-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); getRecommendations(); }
+        });
+        
+        async function loadTotalJobs() {
+            try {
+                const response = await fetch('/api/health');
+                const data = await response.json();
+                if (data.total_jobs) document.getElementById('totalJobs').innerHTML = data.total_jobs;
+            } catch (error) {}
+        }
+        loadTotalJobs();
+        
+        const examples = ['Python, Machine Learning, SQL', 'React, JavaScript, Node.js', 'AWS, Docker, Kubernetes', 'Java, Spring Boot'];
+        let exampleIndex = 0;
+        setInterval(() => {
+            const textarea = document.getElementById('skills-input');
+            if (!textarea.value && document.activeElement !== textarea) {
+                textarea.placeholder = `Example: ${examples[exampleIndex % examples.length]}`;
+                exampleIndex++;
+            }
+        }, 4000);
+    </script>
+</body>
+</html>

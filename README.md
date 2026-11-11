@@ -159,8 +159,8 @@ See what skills you're missing for your dream job and get actionable insights!
 ## 👨‍💻 Author
 
 Rachita Gangji
-- GitHub: rachitaag40
-- LinkedIn: Rachita Gangji
+- GitHub: https://github.com/rachitaag40
+- LinkedIn: https://www.linkedin.com/in/rachitagangji/
 
 </div>
 

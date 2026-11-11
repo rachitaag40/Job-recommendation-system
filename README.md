@@ -158,11 +158,9 @@ See what skills you're missing for your dream job and get actionable insights!
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [sonusg](https://github.com/sonusg)
-- LinkedIn: [Sonu SG](www.linkedin.com/in/sonu-sg-14274425b)
+Rachita Gangji
+- GitHub: rachitaag40
+- LinkedIn: Rachita Gangji
 
-
-⭐ Star this repo if you found it helpful!
 </div>
 
